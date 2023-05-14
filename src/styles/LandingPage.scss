@@ -1,77 +1,91 @@
 $breakpoints: (
-    sm: 540px,
-    md: 758px,
-    lg: 1024px,
+  sm: 540px,
+  md: 758px,
+  lg: 1024px,
 );
 
 @mixin media-up($breakpoint) {
-    @media screen and (min-width: map-get($breakpoints,$breakpoint)) {
-        @content;
-    }
+  @media screen and (min-width: map-get($breakpoints,$breakpoint)) {
+    @content;
+  }
 }
 
-.Hero{
-    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+.Hero {
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  .Hero-Section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
 
-    .Hero-Section{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100vw;
-        height: 100vh;
-        
-         
-        .Hero-Text{
-          border: 1px solid rgb(46, 46, 46);
-          color: rgb(46,46,46);
-          border-radius: 20px;
-          width: 70%;
-          text-align: center;
-          
-  
-          h1{
-            margin: 10px;
-            font-size: 32px;
-          }
-          p{
-            font-size: 20px;
-          }
-  
-        }
+    .Hero-Text {
+      border: 1px solid rgb(46, 46, 46);
+      color: rgb(46, 46, 46);
+      border-radius: 20px;
+      width: 70%;
+      text-align: center;
+
+      h1 {
+        margin: 10px;
+        font-size: 32px;
       }
-
-    @include media-up(md){
-        background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
-
-        .Hero-Section{
-            display: block;
-            width: 100vw;
-            height: 600px;
-            background-image: url(./../assets/Hero_Doctor.png);
-            background-position: bottom;
-            background-repeat: no-repeat;
-            background-size: contain;
-            border-bottom: 1px solid rgb(158, 158, 158);
-      
-            .Hero-Text{
-              border: 1px solid black;
-              border-radius: 20px;
-              width: 40%;
-              text-align: center;
-              position: relative;
-              top: 50%;
-              left: 15%;
-      
-              h1{
-                margin: 10px;
-                font-size: 40px;
-              }
-              p{
-                font-size: 20px;
-              }
-      
-            }
-          }
+      p {
+        font-size: 20px;
+      }
     }
   }
-   
+
+  @include media-up(md) {
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+
+    .Hero-Section {
+      display: block;
+      width: 100vw;
+      height: 600px;
+      background-image: url(./../assets/Hero_Doctor.png);
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-size: contain;
+      border-bottom: 1px solid rgb(158, 158, 158);
+
+      .Hero-Text {
+        border: 1px solid black;
+        border-radius: 20px;
+        width: 40%;
+        text-align: center;
+        position: relative;
+        top: 50%;
+        left: 15%;
+
+        h1 {
+          margin: 10px;
+          font-size: 40px;
+        }
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+.Ventajas {
+  margin: 0 16px;
+  width: 100vw;
+  height: 100vh;
+
+  .Ventajas-Title{
+    ul{
+      list-style: none;
+      font-style: italic;
+    }
+  }
+}
+
+.CallToAction{
+  margin: 0 16px;
+  width: 100vw;
+  height: 100vh;
+}

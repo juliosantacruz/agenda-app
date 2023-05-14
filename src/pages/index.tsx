@@ -34,11 +34,24 @@ const Ventajas = () => {
   )
 }
 
+const CallToAction = () => {
+  return (
+    <section className="CallToAction">
+      <div>
+        <h2> Agenda tu asesoria aqui </h2>
+        <p> No dejes pasar el tiempo e inicia hoy</p>
+        <button>Agendar</button>
+      </div>
+    </section>
+  )
+}
+
 export default function Home() {
   return (
     <>
       <HeroImage />
       <Ventajas />
+      <CallToAction />
     </>
   );
 }
